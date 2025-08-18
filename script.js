@@ -3,6 +3,7 @@ document.addEventListener('click', async function () {
     if (started) return;
     started = true;
     miInputBoxEl.innerHTML = '';
+    miInputBoxEl.innerText = '';
     await sleep(2000);
     await startChat();
 })
