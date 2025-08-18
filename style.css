@@ -11,7 +11,7 @@ body {
 .container {
     padding: 20px;
     /* width: calc(720px + 40px); */
-    width: calc(720px);
+    width: calc(min(100%, 720px));
     height: calc(100vh - 200px);
     /* background-color: #282828; */
 }
@@ -54,6 +54,7 @@ body {
     position: fixed;
     bottom: 20px;
     width: 760px;
+    width: calc(min(98%, 760px));;
 }
 
 .composer-btn {
@@ -160,6 +161,9 @@ body {
     position: absolute;
     font-weight: 500;
     font-size: 28px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
 }
 
 .spinner {
