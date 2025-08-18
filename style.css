@@ -107,9 +107,7 @@ body {
 .mi-input-box[contenteditable="true"]:empty:before {
     content: attr(data-placeholder);
     color: #999;
-    /* grey placeholder */
     pointer-events: none;
-    /* so clicks focus the div */
 }
 
 .mi-input-box[contenteditable="true"]:focus {
