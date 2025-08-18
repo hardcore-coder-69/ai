@@ -1,0 +1,188 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #202020;
+    color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    /* width: calc(720px + 40px); */
+    width: calc(720px);
+    height: calc(100vh - 200px);
+    /* background-color: #282828; */
+}
+
+.inner-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.sender-message-top-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.sender-message-container {
+    background: #282828;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.receiver-message-top-container {
+    margin-bottom: 30px;
+    padding-right: 30px;
+}
+
+.receiver-message-container {}
+
+
+
+.message-input {
+    position: fixed;
+    bottom: 20px;
+    width: 760px;
+}
+
+.composer-btn {
+    margin-right: 10px;
+    background: #383838;
+    border: none;
+    color: #fff;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.truncate {
+    margin-left: 5px;
+}
+
+.composer-submit-btn {
+    background-color: #fff;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mi-container {
+    border: 1px solid #555555;
+    background: #282828;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mi-inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mi-input-box {
+    width: 582px;
+    margin-right: 10px;
+}
+
+.mi-input-box[contenteditable="true"]:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+    /* grey placeholder */
+    pointer-events: none;
+    /* so clicks focus the div */
+}
+
+.mi-input-box[contenteditable="true"]:focus {
+    outline: none;
+    border: none;
+}
+
+
+.bottom-options {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.add-photos-btn {
+    display: flex;
+    align-items: center;
+    background: #383838;
+    border-radius: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.think-harder-btn {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    background: #383838;
+    color: #99ceff;
+    border-radius: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.receiver-thinking-container {
+    display: flex;
+}
+
+.receiver-thinking-text {
+    margin-left: 30px;
+}
+
+.place-label {
+    position: absolute;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.spinner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    animation: grow 1s ease-in-out infinite;
+}
+
+@keyframes grow {
+
+    0%,
+    100% {
+        transform: scale(0.5);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
