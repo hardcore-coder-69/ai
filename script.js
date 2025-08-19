@@ -1,3 +1,16 @@
+const keyboardAudioEl = document.getElementById('keyboard-audio');
+const sentAudioEl = document.getElementById('sent-audio');
+const thinkingAudioEl = document.getElementById('computer-calculating-audio');
+const aiTypingAudioEl = document.getElementById('ai-typing-audio');
+keyboardAudioEl.load();
+sentAudioEl.load();
+thinkingAudioEl.load();
+aiTypingAudioEl.load();
+keyboardAudioEl.loop = true;
+// sentAudioEl.loop = true;
+thinkingAudioEl.loop = true;
+aiTypingAudioEl.loop = true;
+
 let started = false;
 document.addEventListener('click', async function () {
     if (started) return;
@@ -29,13 +42,15 @@ async function pushReceiverMessage(data) {
     await typeWriter({
         textEl: messageSpanEl,
         text: data.text,
-        typingSpeed: 20
+        typingSpeed: 20,
+        soundEl: aiTypingAudioEl
     });
     // messageSpanEl.innerText = data.text;
 }
 
 async function receiverThinking(data) {
-    await sleep(500);
+    thinkingAudioEl.currentTime = 0;
+    thinkingAudioEl.play();
     let receiverMessageTopEl = document.createElement('div');
     receiverMessageTopEl.classList.add('receiver-message-top-container');
     let receiverMessageEl = document.createElement('div');
@@ -58,11 +73,14 @@ async function receiverThinking(data) {
         await sleep(messageObject.time);
     }
 
+    thinkingAudioEl.pause();
     receiverMessageTopEl.remove();
 }
 
 async function showSenderMessage(data) {
     hidePlaceLabel();
+    sentAudioEl.currentTime = 0;
+    sentAudioEl.play();
     let senderMessageTopEl = document.createElement('div');
     senderMessageTopEl.classList.add('sender-message-top-container');
     let senderMessageEl = document.createElement('div');
@@ -90,7 +108,8 @@ async function showSenderTyping(data) {
     await typeWriter({
         textEl: miInputBoxEl,
         text: data.text,
-        typingSpeed: data.typingSpeed
+        typingSpeed: data.typingSpeed,
+        soundEl: keyboardAudioEl
     });
 }
 
@@ -99,9 +118,10 @@ let speed = 0;
 let charIndex = 0;
 let pauseCharacters = [];
 let specialLength = 1;
-async function typeWriter({ textEl, text, typingSpeed }) {
-    if (textEl && text && typingSpeed) {
-        // await keyboardTypingSoundEl.play();
+async function typeWriter({ textEl, text, typingSpeed, soundEl }) {
+    if (textEl && text && typingSpeed && soundEl) {
+        soundEl.currentTime = 0;
+        await soundEl.play();
     };
     if (text) typingText = text;
     if (typingSpeed) speed = typingSpeed;
@@ -116,12 +136,12 @@ async function typeWriter({ textEl, text, typingSpeed }) {
 
         charIndex++;
         await sleep(speed);
-        await typeWriter({ textEl });
+        await typeWriter({ textEl, soundEl });
     } else {
         typingText = '';
         speed = 0;
         charIndex = 0;
-        // await keyboardTypingSoundEl.pause();
+        await soundEl.pause();
     }
 }
 
