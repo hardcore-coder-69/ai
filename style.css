@@ -6,6 +6,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
+    font-size: 22px;
 }
 
 .container {
@@ -101,7 +102,7 @@ body {
 }
 
 .mi-input-box {
-    width: 582px;
+    width: 760px;
     margin-right: 10px;
 }
 
@@ -120,9 +121,19 @@ body {
 .bottom-options {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     margin-top: 20px;
     font-size: 14px;
+}
+
+.left-actions {
+    display: flex;
+    align-items: center;
+}
+
+.right-actions {
+    display: flex;
+    align-items: center;
 }
 
 .add-photos-btn {
