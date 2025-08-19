@@ -22,6 +22,12 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
+        text: `As an AI language model, how can I help you?`,
+        image: '',
+        soundEl: '',
+    });
+
+    await pushReceiverMessage({
         text: `What's on the agenda today?`,
         image: '',
         soundEl: '',
