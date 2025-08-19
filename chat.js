@@ -1,7 +1,7 @@
 async function startChat() {
     await pushSenderMessage({
-        text: 'Will AI replace jobs?',
-        typingSpeed: 50,
+        text: 'We must colonize Mars because Earth’s future is uncertain. Climate change, nuclear threats, or even asteroid impacts could wipe us out. A second home ensures humanity’s survival.',
+        typingSpeed: 70,
         image: '',
         soundEl: '',
     });
@@ -10,57 +10,67 @@ async function startChat() {
         messages: [
             {
                 text: 'Thinking...',
-                time: 2000
+                time: 5000
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `Yes — but also no.`,
+        text: `Survival is important, but Mars colonization is a distraction.`,
         image: '',
         soundEl: '',
     });
 
-    await sleep(1000);
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `The billions spent on rockets and habitats could be used to fix Earth’s pressing crises.`,
+        image: '',
+        linked: true,
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `Poverty, deforestation, and climate collapse.`,
+        image: '',
+        linked: true,
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `Why escape when we need to repair?`,
+        image: '',
+        linked: true,
+        soundEl: '',
+    });
+
+
     await pushSenderMessage({
-        text: 'What does that supposed to mean?',
-        typingSpeed: 50,
+        text: 'History shows progress comes from bold steps. Colonizing Mars will push us to advance life-support systems, renewable energy, robotics—technologies that can also help Earth. It’s not escape; it’s preparation. We must colonize Mars because Earth’s future is uncertain. Climate change, nuclear threats, or even asteroid impacts could wipe us out. A second home ensures humanity’s survival.',
+        typingSpeed: 70,
         image: '',
         soundEl: '',
     });
+
     await receiverThinking({
         messages: [
             {
                 text: 'Thinking...',
-                time: 2000
+                time: 5000
             }
         ]
     });
-    
+
     await pushReceiverMessage({
-        text: `That means AI will definitely automate certain tasks.`,
+        text: `Preparation is valuable, but Mars is hostile—thin atmosphere, extreme cold, no breathable air. Even with technology, life there will be fragile. Isn’t it wiser to secure our robust, life-sustaining planet rather than gamble on a barren one?`,
         image: '',
         soundEl: '',
     });
 
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `Which means some jobs will be replaced.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `But, AI will also create new opportunities that didn’t exist before.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(3000);
     await pushSenderMessage({
-        text: 'What jobs will be replaced completely?',
-        typingSpeed: 50,
+        text: 'Mars can be hostile for now. But the Moon was once seen as unreachable, yet we walked on it. Every great leap seemed impossible until it was done. Mars colonization will expand human potential and unite nations in a common cause.',
+        typingSpeed: 70,
         image: '',
         soundEl: '',
     });
@@ -69,35 +79,20 @@ async function startChat() {
         messages: [
             {
                 text: 'Thinking...',
-                time: 2000
+                time: 5000
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `Repetitive tasks like Data entry.`,
+        text: `Or divide them further. Space colonization could deepen inequality—only the wealthy and powerful nations benefit, while billions still struggle for food and water here on Earth. Shouldn’t justice at home come before adventure in space?`,
         image: '',
         soundEl: '',
     });
 
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `Pattern-based work like simple coding.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `Physical jobs with clear rules like Driving (self-driving vehicles).`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(3000);
     await pushSenderMessage({
-        text: 'What are low risk jobs?',
-        typingSpeed: 50,
+        text: 'Exploration has always lifted humanity as a whole. The internet, GPS, satellites—all came from space research. Colonizing Mars will yield breakthroughs beyond imagination. And if Earth falls, at least our species continues.',
+        typingSpeed: 70,
         image: '',
         soundEl: '',
     });
@@ -106,161 +101,13 @@ async function startChat() {
         messages: [
             {
                 text: 'Thinking...',
-                time: 2000
+                time: 5000
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `Creative fields like Designers, writers, marketers.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `AI will act as a co-pilot.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `Increasing the productivity.`,
-        image: '',
-        soundEl: '',
-    });
-
-
-    await sleep(3000);
-    await pushSenderMessage({
-        text: 'Other low risk jobs?',
-        typingSpeed: 50,
-        image: '',
-        soundEl: '',
-    });
-
-    await receiverThinking({
-        messages: [
-            {
-                text: 'Thinking...',
-                time: 2000
-            }
-        ]
-    });
-
-    await pushReceiverMessage({
-        text: `Doctors won’t be replaced.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `But AI will help diagnose faster.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `Education: Teachers won’t vanish.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `But AI tutors will assist students individually`,
-        image: '',
-        soundEl: '',
-    });
-
-
-    await sleep(3000);
-    await pushSenderMessage({
-        text: 'Will AI also create new jobs?',
-        typingSpeed: 50,
-        image: '',
-        soundEl: '',
-    });
-
-    await receiverThinking({
-        messages: [
-            {
-                text: 'Thinking...',
-                time: 2000
-            }
-        ]
-    });
-
-    await pushReceiverMessage({
-        text: `Yes. Definitely.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `AI will also create new jobs.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(3000);
-    await pushSenderMessage({
-        text: 'What new jobs it will create?',
-        typingSpeed: 50,
-        image: '',
-        soundEl: '',
-    });
-
-    await receiverThinking({
-        messages: [
-            {
-                text: 'Thinking...',
-                time: 2000
-            }
-        ]
-    });
-
-    await pushReceiverMessage({
-        text: `AI trainers.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `Prompt engineers.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `Data curators.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `AI regulators.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `The Bottom Line:`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `AI won’t replace you. But a person using AI might.`,
+        text: `That’s the core disagreement: I believe saving Earth is not optional. This planet is unique, irreplaceable. Instead of preparing to leave, humanity should learn stewardship. Because no matter how far we go, Earth is our true home.`,
         image: '',
         soundEl: '',
     });

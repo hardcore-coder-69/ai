@@ -32,6 +32,10 @@ body {
     padding-left: 30px;
 }
 
+.sender-message-text {
+    font-size: 16px;
+}
+
 .sender-message-container {
     background: #282828;
     padding-top: 10px;
@@ -45,6 +49,10 @@ body {
 .receiver-message-top-container {
     margin-bottom: 30px;
     padding-right: 30px;
+}
+
+.receiver-message-margin-top {
+    margin-top: -20px;
 }
 
 .receiver-message-container {}

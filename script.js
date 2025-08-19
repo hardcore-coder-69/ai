@@ -2,10 +2,13 @@ const keyboardAudioEl = document.getElementById('keyboard-audio');
 const sentAudioEl = document.getElementById('sent-audio');
 const thinkingAudioEl = document.getElementById('computer-calculating-audio');
 const aiTypingAudioEl = document.getElementById('ai-typing-audio');
+const intenseBGMAudioEl = document.getElementById('intense-bgm-audio');
 keyboardAudioEl.load();
 sentAudioEl.load();
 thinkingAudioEl.load();
 aiTypingAudioEl.load();
+intenseBGMAudioEl.load();
+intenseBGMAudioEl.loop = true;
 keyboardAudioEl.loop = true;
 // sentAudioEl.loop = true;
 thinkingAudioEl.loop = true;
@@ -17,6 +20,9 @@ document.addEventListener('click', async function () {
     started = true;
     miInputBoxEl.innerHTML = '';
     await sleep(2000);
+
+    intenseBGMAudioEl.volume = 0.3;
+    intenseBGMAudioEl.play();
     await startChat();
 })
 
@@ -25,6 +31,7 @@ const innerContainerEl = document.getElementById('inner-container');
 
 async function pushSenderMessage(data) {
     await showSenderTyping(data);
+    await sleep(500);
     await clearSenderMessage(data);
     await showSenderMessage(data);
 }
@@ -32,6 +39,9 @@ async function pushSenderMessage(data) {
 async function pushReceiverMessage(data) {
     let receiverMessageTopEl = document.createElement('div');
     receiverMessageTopEl.classList.add('receiver-message-top-container');
+    if (data.linked) {
+        receiverMessageTopEl.classList.add('receiver-message-margin-top');
+    }
     let receiverMessageEl = document.createElement('div');
     receiverMessageEl.classList.add('receiver-message-container');
     let messageSpanEl = document.createElement('span');
@@ -42,7 +52,7 @@ async function pushReceiverMessage(data) {
     await typeWriter({
         textEl: messageSpanEl,
         text: data.text,
-        typingSpeed: 20,
+        typingSpeed: 50,
         soundEl: aiTypingAudioEl
     });
     // messageSpanEl.innerText = data.text;
@@ -59,7 +69,7 @@ async function receiverThinking(data) {
     let spinnerEl = document.createElement('div');
     spinnerEl.classList.add('spinner');
     receiverMessageEl.appendChild(spinnerEl);
-    
+
     let messageSpanEl = document.createElement('span');
     messageSpanEl.classList.add('receiver-message-text');
     messageSpanEl.classList.add('receiver-thinking-text');
@@ -67,7 +77,7 @@ async function receiverThinking(data) {
     receiverMessageTopEl.appendChild(receiverMessageEl);
     innerContainerEl.appendChild(receiverMessageTopEl);
 
-    for(let i = 0; i < data.messages.length; i++) {
+    for (let i = 0; i < data.messages.length; i++) {
         let messageObject = data.messages[i];
         messageSpanEl.innerText = messageObject.text;
         await sleep(messageObject.time);
@@ -99,7 +109,7 @@ async function clearSenderMessage(data) {
 
 function hidePlaceLabel() {
     const placeLabelEl = document.getElementById('place-label');
-    if(placeLabelEl) {
+    if (placeLabelEl) {
         placeLabelEl.remove();
     }
 }
