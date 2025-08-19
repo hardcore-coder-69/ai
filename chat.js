@@ -35,7 +35,7 @@ async function startChat() {
         soundEl: '',
     });
 
-    await sleep(2000);
+    await sleep(3000);
     await pushSenderMessage({
         text: 'Earth could be ripped out of the solar system?',
         typingSpeed: 50,
@@ -72,7 +72,7 @@ async function startChat() {
         soundEl: '',
     });
 
-    await sleep(2000);
+    await sleep(3000);
     await pushSenderMessage({
         text: 'What about life on Earth?',
         typingSpeed: 50,
