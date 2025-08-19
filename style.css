@@ -162,6 +162,7 @@ body {
 
 .receiver-thinking-container {
     display: flex;
+    align-items: center;
 }
 
 .receiver-thinking-text {
