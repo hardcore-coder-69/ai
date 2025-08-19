@@ -9,7 +9,7 @@ async function startChat() {
     await receiverThinking({
         messages: [
             {
-                text: 'Thinking harder...',
+                text: 'Thinking...',
                 time: 2000
             }
         ]
