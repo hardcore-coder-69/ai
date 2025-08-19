@@ -57,13 +57,22 @@ body {
 
 .receiver-message-container {}
 
+.ended-message-top-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
 
 
 .message-input {
     position: fixed;
     bottom: 20px;
     width: 760px;
-    width: calc(min(98%, 760px));;
+    width: calc(min(98%, 760px));
+    ;
 }
 
 .composer-btn {

@@ -107,6 +107,19 @@ async function clearSenderMessage(data) {
     miInputBoxEl.textContent = '';
 }
 
+async function chatEnded(data) {
+    let endedMessageTopEl = document.createElement('div');
+    endedMessageTopEl.classList.add('ended-message-top-container');
+    let endedMessageEl = document.createElement('div');
+    endedMessageEl.classList.add('ended-message-container');
+    let messageSpanEl = document.createElement('span');
+    messageSpanEl.classList.add('ended-message-text');
+    messageSpanEl.innerText = `${data.text}`;
+    endedMessageEl.appendChild(messageSpanEl);
+    endedMessageTopEl.appendChild(endedMessageEl);
+    innerContainerEl.appendChild(endedMessageTopEl);
+}
+
 function hidePlaceLabel() {
     const placeLabelEl = document.getElementById('place-label');
     if (placeLabelEl) {

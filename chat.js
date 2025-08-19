@@ -111,4 +111,8 @@ async function startChat() {
         image: '',
         soundEl: '',
     });
+
+    await chatEnded({
+        text: `You can't send new messages`
+    });
 }
