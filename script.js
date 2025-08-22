@@ -9,6 +9,7 @@ thinkingAudioEl.load();
 aiTypingAudioEl.load();
 intenseBGMAudioEl.load();
 intenseBGMAudioEl.loop = true;
+keyboardAudioEl.volume = 0;
 keyboardAudioEl.loop = true;
 // sentAudioEl.loop = true;
 thinkingAudioEl.loop = true;
@@ -21,7 +22,7 @@ document.addEventListener('click', async function () {
     miInputBoxEl.innerHTML = '';
     await sleep(2000);
 
-    intenseBGMAudioEl.volume = 0.3;
+    intenseBGMAudioEl.volume = 0.1;
     intenseBGMAudioEl.play();
     await startChat();
 })
@@ -49,6 +50,7 @@ async function pushReceiverMessage(data) {
     receiverMessageEl.appendChild(messageSpanEl);
     receiverMessageTopEl.appendChild(receiverMessageEl);
     innerContainerEl.appendChild(receiverMessageTopEl);
+    speakText(data.text, 1.5, null);
     await typeWriter({
         textEl: messageSpanEl,
         text: data.text,
@@ -127,7 +129,27 @@ function hidePlaceLabel() {
     }
 }
 
+let voices = [];
+async function populateVoices() {
+    voices = speechSynthesis.getVoices().sort((a, b) => a.name.localeCompare(b.name));
+    console.log(voices);
+};
+speechSynthesis.onvoiceschanged = populateVoices;
+populateVoices();
+
+async function speakText(text, rate, voice) {
+    if (!text) return;
+    if (speechSynthesis.speaking) {
+        speechSynthesis.cancel();
+    }
+    const u = new SpeechSynthesisUtterance(text);
+    if (voice) u.voice = voice;
+    if (rate) u.rate = parseFloat(rate);
+    speechSynthesis.speak(u);
+}
+
 async function showSenderTyping(data) {
+    speakText(data.text, 1.25, null);
     await typeWriter({
         textEl: miInputBoxEl,
         text: data.text,
@@ -171,3 +193,7 @@ async function typeWriter({ textEl, text, typingSpeed, soundEl }) {
 async function sleep(ms) {
     return new Promise(res => setTimeout(() => res(), ms));
 }
+
+document.addEventListener('onload', function () {
+    speechSynthesis.cancel();
+})

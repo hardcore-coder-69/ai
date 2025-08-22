@@ -28,7 +28,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: right;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     padding-left: 30px;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .receiver-message-top-container {
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     padding-right: 30px;
 }
 
