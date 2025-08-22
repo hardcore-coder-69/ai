@@ -184,6 +184,7 @@ body {
 
 .receiver-thinking-text {
     margin-left: 30px;
+    animation: blink 1s infinite;
 }
 
 .place-label {
@@ -213,6 +214,18 @@ body {
 
     50% {
         transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
         opacity: 1;
     }
 }

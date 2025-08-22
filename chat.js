@@ -16,38 +16,15 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `Survival is important, but Mars colonization is a distraction.`,
+        text: `Survival is important, but Mars colonization is a distraction. The billions spent on rockets and habitats could be used to fix Earth’s pressing crises. Poverty, deforestation, and climate collapse. Why escape when we need to repair?`,
         image: '',
         soundEl: '',
     });
+
 
     await sleep(500);
-    await pushReceiverMessage({
-        text: `The billions spent on rockets and habitats could be used to fix Earth’s pressing crises.`,
-        image: '',
-        linked: true,
-        soundEl: '',
-    });
-
-    await sleep(500);
-    await pushReceiverMessage({
-        text: `Poverty, deforestation, and climate collapse.`,
-        image: '',
-        linked: true,
-        soundEl: '',
-    });
-
-    await sleep(500);
-    await pushReceiverMessage({
-        text: `Why escape when we need to repair?`,
-        image: '',
-        linked: true,
-        soundEl: '',
-    });
-
-
     await pushSenderMessage({
-        text: 'History shows progress comes from bold steps. Colonizing Mars will push us to advance life-support systems, renewable energy, robotics—technologies that can also help Earth. It’s not escape; it’s preparation. We must colonize Mars because Earth’s future is uncertain. Climate change, nuclear threats, or even asteroid impacts could wipe us out. A second home ensures humanity’s survival.',
+        text: 'History shows progress comes from bold steps. Colonizing Mars will push us to advance life-support systems, renewable energy, robotics—technologies that can also help Earth. It’s not escape; it’s preparation.',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -68,6 +45,7 @@ async function startChat() {
         soundEl: '',
     });
 
+    await sleep(500);
     await pushSenderMessage({
         text: 'Mars can be hostile for now. But the Moon was once seen as unreachable, yet we walked on it. Every great leap seemed impossible until it was done. Mars colonization will expand human potential and unite nations in a common cause.',
         typingSpeed: 70,
@@ -90,6 +68,7 @@ async function startChat() {
         soundEl: '',
     });
 
+    await sleep(500);
     await pushSenderMessage({
         text: 'Exploration has always lifted humanity as a whole. The internet, GPS, satellites—all came from space research. Colonizing Mars will yield breakthroughs beyond imagination. And if Earth falls, at least our species continues.',
         typingSpeed: 70,
@@ -113,6 +92,6 @@ async function startChat() {
     });
 
     await chatEnded({
-        text: `You can't send new messages`
+        text: `Chat ended.`
     });
 }
