@@ -19,6 +19,7 @@ let started = false;
 document.addEventListener('click', async function () {
     if (started) return;
     started = true;
+    hideAds();
     miInputBoxEl.innerHTML = '';
     await sleep(2000);
 
@@ -198,3 +199,30 @@ window.addEventListener('load', function () {
     speechSynthesis.cancel();
     miInputBoxEl.innerText = '';
 })
+
+async function showAds() {
+    document.body.style.transform = 'scale(1)';
+    const innerContainer = document.getElementById('inner-container');
+    innerContainer.style.transform = '';
+
+    const leftAdContainer = document.getElementById('left-ad-container');
+    leftAdContainer.style.display = 'flex';
+    
+    const rightAdContainer = document.getElementById('right-ad-container');
+    rightAdContainer.style.display = 'flex';
+}
+
+async function hideAds() {
+    document.body.style.overflow = 'hidden';
+    document.body.style.transition = 'transform 1s ease-in';
+    document.body.style.transform = 'scale(1.6)';
+
+    const innerContainer = document.getElementById('inner-container');
+    innerContainer.style.transform = 'translateY(-150px)';
+
+    const leftAdContainer = document.getElementById('left-ad-container');
+    leftAdContainer.style.display = 'none';
+    
+    const rightAdContainer = document.getElementById('right-ad-container');
+    rightAdContainer.style.display = 'none';
+}

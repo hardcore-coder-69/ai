@@ -36,7 +36,6 @@ body {
     justify-content: center;
     font-size: 12px;
     height: calc(100vh - 40px);
-    display: none;
 }
 
 .left-ad-container {
@@ -66,7 +65,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: right;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding-left: 30px;
 }
 
@@ -86,8 +85,14 @@ body {
 
 .receiver-message-top-container {
     font-family: "Courier Prime", monospace;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding-right: 30px;
+}
+
+.receiver-message-text {
+    font-size: 26px;
+    letter-spacing: -1px;
+    color: rgb(0, 255, 0);
 }
 
 .receiver-message-margin-top {
@@ -226,6 +231,7 @@ body {
 .receiver-thinking-text {
     margin-left: 30px;
     animation: blink 1s infinite;
+    color: #e8e8e8;
 }
 
 .place-label {
