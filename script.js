@@ -194,6 +194,7 @@ async function sleep(ms) {
     return new Promise(res => setTimeout(() => res(), ms));
 }
 
-document.addEventListener('onload', function () {
+window.addEventListener('load', function () {
     speechSynthesis.cancel();
+    miInputBoxEl.innerText = '';
 })
