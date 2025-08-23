@@ -9,7 +9,7 @@ thinkingAudioEl.load();
 aiTypingAudioEl.load();
 intenseBGMAudioEl.load();
 intenseBGMAudioEl.loop = true;
-keyboardAudioEl.volume = 0;
+keyboardAudioEl.volume = 0.5;
 keyboardAudioEl.loop = true;
 // sentAudioEl.loop = true;
 thinkingAudioEl.loop = true;
