@@ -1,6 +1,6 @@
 async function startChat() {
     await pushSenderMessage({
-        text: 'We must colonize Mars because Earth’s future is uncertain. Climate change, nuclear threats, or even asteroid impacts could wipe us out. A second home ensures humanity’s survival.',
+        text: 'What would happen if the speed of light was slower?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -16,7 +16,7 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `Survival is important, but Mars colonization is a distraction. The billions spent on rockets and habitats could be used to fix Earth’s pressing crises. Poverty, deforestation, and climate collapse. Why escape when we need to repair?`,
+        text: `If the sunlight was slower, it would take much longer to reach light from Sun to Earth. Instead of 8 minutes and 20 seconds, it could take hours or days!`,
         image: '',
         soundEl: '',
     });
@@ -24,7 +24,7 @@ async function startChat() {
 
     await sleep(500);
     await pushSenderMessage({
-        text: 'History shows progress comes from bold steps. Colonizing Mars will push us to advance life-support systems, renewable energy, robotics—technologies that can also help Earth. It’s not escape; it’s preparation.',
+        text: 'What about the other stars? Will they look the same as they look now?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -40,14 +40,14 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `Preparation is valuable, but Mars is hostile—thin atmosphere, extreme cold, no breathable air. Even with technology, life there will be fragile. Isn’t it wiser to secure our robust, life-sustaining planet rather than gamble on a barren one?`,
+        text: `Nope! Since light now takes longer time to travel, we’d be seeing much older versions of stars. Maybe not even see some of them yet because light haven't reached us yet.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
     await pushSenderMessage({
-        text: 'Mars can be hostile for now. But the Moon was once seen as unreachable, yet we walked on it. Every great leap seemed impossible until it was done. Mars colonization will expand human potential and unite nations in a common cause.',
+        text: 'Would this affect our current technology also?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -63,14 +63,14 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `Or divide them further. Space colonization could deepen inequality—only the wealthy and powerful nations benefit, while billions still struggle for food and water here on Earth. Shouldn’t justice at home come before adventure in space?`,
+        text: `Yes. Things like internet, video calls, and GPS would all slow down. Talking to someone far away might feel like waiting for a letter in the mail.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
     await pushSenderMessage({
-        text: 'Exploration has always lifted humanity as a whole. The internet, GPS, satellites—all came from space research. Colonizing Mars will yield breakthroughs beyond imagination. And if Earth falls, at least our species continues.',
+        text: 'What about the known laws of physics? Will they still apply or get changed?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -86,7 +86,30 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `That’s the core disagreement: I believe saving Earth is not optional. This planet is unique, irreplaceable. Instead of preparing to leave, humanity should learn stewardship. Because no matter how far we go, Earth is our true home.`,
+        text: `The speed of light is part of the universe’s rules. If it were slower, time, space, and gravity might all behave differently. So the known physics laws might not work.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushSenderMessage({
+        text: 'So, what would the universe feel like?',
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 5000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `The universe would feel delayed, stretched out, and much stranger than the one we know!`,
         image: '',
         soundEl: '',
     });

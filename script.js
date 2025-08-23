@@ -218,7 +218,7 @@ async function hideAds() {
     document.body.style.transform = 'scale(1.6)';
 
     const innerContainer = document.getElementById('inner-container');
-    innerContainer.style.transform = 'translateY(-150px)';
+    innerContainer.style.transform = 'translateY(-170px)';
 
     const leftAdContainer = document.getElementById('left-ad-container');
     leftAdContainer.style.display = 'none';
