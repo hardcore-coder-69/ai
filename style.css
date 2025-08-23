@@ -9,6 +9,44 @@ body {
     font-size: 22px;
 }
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-screen {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+}
+
+.chat-content {
+    width: calc(min(100%, 760px));
+}
+
+.left-ad-container, .right-ad-container {
+    width: 200px;
+    background-color: #383838;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-size: 12px;
+    height: calc(100vh - 40px);
+    /* display: none; */
+}
+
+.left-ad-container {
+    margin-right: 15px;
+}
+
+.right-ad-container {
+    margin-left: 15px;
+}
+
 .container {
     padding: 20px;
     /* width: calc(720px + 40px); */
@@ -117,6 +155,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 15px;
 }
 
 .mi-input-box {
@@ -229,5 +268,11 @@ body {
 
     50% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .left-ad-container, .right-ad-container {
+        display: none;
     }
 }
