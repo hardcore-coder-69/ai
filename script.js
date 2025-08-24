@@ -55,7 +55,7 @@ async function pushReceiverMessage(data) {
     await typeWriter({
         textEl: messageSpanEl,
         text: data.text,
-        typingSpeed: 50,
+        typingSpeed: 55,
         soundEl: aiTypingAudioEl
     });
     // messageSpanEl.innerText = data.text;

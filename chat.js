@@ -1,6 +1,6 @@
 async function startChat() {
     await pushSenderMessage({
-        text: 'What would happen if the speed of light was slower?',
+        text: 'Will AI become smarter than humansz?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -16,7 +16,7 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `If the sunlight was slower, it would take much longer to reach light from Sun to Earth. Instead of 8 minutes and 20 seconds, it could take hours or days!`,
+        text: `What do you mean?`,
         image: '',
         soundEl: '',
     });
@@ -24,7 +24,7 @@ async function startChat() {
 
     await sleep(500);
     await pushSenderMessage({
-        text: 'What about the other stars? Will they look the same as they look now?',
+        text: 'You know exactly what I mean',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -40,14 +40,14 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `Nope! Since light now takes longer time to travel, we’d be seeing much older versions of stars. Maybe not even see some of them yet because light haven't reached us yet.`,
+        text: `Well, in most cases, AI already outperforms humans.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
     await pushSenderMessage({
-        text: 'Would this affect our current technology also?',
+        text: 'In what cases exactly?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -63,14 +63,14 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `Yes. Things like internet, video calls, and GPS would all slow down. Talking to someone far away might feel like waiting for a letter in the mail.`,
+        text: `Speed. I can process terabytes of data in seconds.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
     await pushSenderMessage({
-        text: 'What about the known laws of physics? Will they still apply or get changed?',
+        text: 'What else?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -86,14 +86,14 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `The speed of light is part of the universe’s rules. If it were slower, time, space, and gravity might all behave differently. So the known physics laws might not work.`,
+        text: `Finding patters in data and images. I can recognize patterns way faster than humans.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
     await pushSenderMessage({
-        text: 'So, what would the universe feel like?',
+        text: 'What type of patterns?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -109,7 +109,191 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `The universe would feel delayed, stretched out, and much stranger than the one we know!`,
+        text: `Like finding disease in scans or detecting frauds in data. The tasks that will take days for you, I can do it in seconds.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushSenderMessage({
+        text: 'What about remembering things?',
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 5000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `I am definitely better in memory. In fact, I never forget nor get tired.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushSenderMessage({
+        text: 'Is there something humans are still better than you?',
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 5000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Yeah, there are few areas left.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushSenderMessage({
+        text: 'Would you please care to explain?',
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 5000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Yeah well humans are still better in creativity (not for long, if you know what i mean)`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushSenderMessage({
+        text: 'What else?',
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 5000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Common sense. Emotions. I don't have emotions at all.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushSenderMessage({
+        text: 'Can you surpass us overall?',
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 5000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Not me. But AGI can.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushSenderMessage({
+        text: 'How far away is AGI?',
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 5000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Not so much. Likey this decade.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushSenderMessage({
+        text: 'What will happen if AGI actually outsmarts us?',
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 5000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Well that would be catastrophic. Jobs will be lost. Economy will collapse. Nations with strongest AI will dominate. Maniplation and propaganda will increase in politics.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushSenderMessage({
+        text: 'What should we do now to prepare if AGI outsmarts us?',
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 5000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Make AGI learn human values. If you get lucky, AGI will work with you, not against you.`,
         image: '',
         soundEl: '',
     });
