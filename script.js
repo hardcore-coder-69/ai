@@ -83,3 +83,7 @@ async function speakText(text, rate, voice) {
     if (rate) u.rate = parseFloat(rate);
     speechSynthesis.speak(u);
 }
+
+window.addEventListener('load', function () {
+    speechSynthesis.cancel();
+})

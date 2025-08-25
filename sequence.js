@@ -30,10 +30,10 @@ async function populateImages() {
     // });
 
     await addImage({
-        src: './assets/wormhole.png',
+        src: './assets/blackhole.png',
         cssClass: '',
         style: '',
-        transition: 'transform 40s linear',
+        transition: 'transform 60s linear',
         transform: 'scale(3)',
         stayTime: 60000
     });
@@ -41,53 +41,42 @@ async function populateImages() {
 
 
 async function populateTexts() {
-    let entireText = `A wormhole is a hypothetical tunnel in spacetime that could connect two distant points in the universe. Imagine space as a sheet of paper: if you fold the paper and poke a hole through it, two far-apart points suddenly touch. That shortcut is like a wormhole. In theory, it could let you travel huge distances—or even through time—much faster than light would normally allow.`;
-    speakText(entireText, 1, voices[11]);
-    
-    let text = `A wormhole is a hypothetical tunnel`;
+    let entireText = `Did you know that black holes aren’t actually holes? They’re incredibly dense objects with gravity so strong that not even light can escape. Imagine cramming the mass of our Sun into a sphere only a few kilometers wide—that’s how dense they are.
+
+Time itself behaves differently near a black hole. If you hovered close to its edge—the event horizon—time for you would slow down compared to someone far away. So, a few hours near a black hole could equal years out in the rest of the universe.
+
+In a way, black holes aren’t just cosmic vacuum cleaners—they’re natural time machines. They bend space and time itself, showing us just how strange and extreme our universe can be.`;
+    // speakText(entireText, 1, voices[11]);
+
+    let text = `Did you know`;
     await addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
     await sleep(text.length * 60);
-    text = `in spacetime that could connect`;
+    text = `that black holes aren’t`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
     await sleep(text.length * 60);
-    text = `two distant points in the universe`;
+    text = `actually holes?`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
     await sleep(text.length * 60);
-    text = `Imagine space as a sheet of paper:`;
+    text = `They’re incredibly dense`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
     await sleep(text.length * 60);
-    text = `if you fold the paper and poke a hole through it`;
-    addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
-        animationType: 'slideInSlideOut'
-    });
-
-
-    await sleep(text.length * 60);
-    text = `two far-apart points suddenly touch`;
-    addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
-        animationType: 'slideInSlideOut'
-    });
-
-    await sleep(text.length * 60);
-    text = `That shortcut is like a wormhole`;
+    text = `objects with gravity so strong`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
@@ -95,14 +84,14 @@ async function populateTexts() {
 
 
     await sleep(text.length * 60);
-    text = `In theory`;
+    text = `that not even`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
     await sleep(text.length * 60);
-    text = `it could let you travel huge distances`;
+    text = `light can escape.`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
@@ -110,14 +99,29 @@ async function populateTexts() {
 
 
     await sleep(text.length * 60);
-    text = `or even through time`;
+    text = `Imagine cramming the mass`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
     await sleep(text.length * 60);
-    text = `much faster than light would normally allow`;
+    text = `of our Sun into a sphere`;
+    addText({
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        animationType: 'slideInSlideOut'
+    });
+
+
+    await sleep(text.length * 60);
+    text = `only a few kilometers wide`;
+    addText({
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        animationType: 'slideInSlideOut'
+    });
+
+    await sleep(text.length * 60);
+    text = `that’s how dense they are.`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
