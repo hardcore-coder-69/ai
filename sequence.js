@@ -33,7 +33,7 @@ async function populateImages() {
         src: './assets/blackhole.png',
         cssClass: '',
         style: '',
-        transition: 'transform 60s linear',
+        transition: 'transform 30s linear',
         transform: 'scale(3)',
         stayTime: 60000
     });
@@ -41,12 +41,8 @@ async function populateImages() {
 
 
 async function populateTexts() {
-    let entireText = `Did you know that black holes aren’t actually holes? They’re incredibly dense objects with gravity so strong that not even light can escape. Imagine cramming the mass of our Sun into a sphere only a few kilometers wide—that’s how dense they are.
-
-Time itself behaves differently near a black hole. If you hovered close to its edge—the event horizon—time for you would slow down compared to someone far away. So, a few hours near a black hole could equal years out in the rest of the universe.
-
-In a way, black holes aren’t just cosmic vacuum cleaners—they’re natural time machines. They bend space and time itself, showing us just how strange and extreme our universe can be.`;
-    // speakText(entireText, 1, voices[11]);
+    let entireText = `Did you know that black holes aren’t actually holes in space? Instead, They’re incredibly dense objects with gravity so strong that nothing can escape, not even light. Imagine squeezing the mass of our Sun into a sphere of a few meters radius, that’s how dense they are.`;
+    speakText(entireText, 0.9, null);
 
     let text = `Did you know`;
     await addText({
@@ -62,7 +58,14 @@ In a way, black holes aren’t just cosmic vacuum cleaners—they’re natural t
     });
 
     await sleep(text.length * 60);
-    text = `actually holes?`;
+    text = `actually holes in space?`;
+    addText({
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        animationType: 'slideInSlideOut'
+    });
+
+    await sleep(text.length * 60);
+    text = `Instead,`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
@@ -84,29 +87,14 @@ In a way, black holes aren’t just cosmic vacuum cleaners—they’re natural t
 
 
     await sleep(text.length * 60);
-    text = `that not even`;
+    text = `that nothing can escape`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
     await sleep(text.length * 60);
-    text = `light can escape.`;
-    addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
-        animationType: 'slideInSlideOut'
-    });
-
-
-    await sleep(text.length * 60);
-    text = `Imagine cramming the mass`;
-    addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
-        animationType: 'slideInSlideOut'
-    });
-
-    await sleep(text.length * 60);
-    text = `of our Sun into a sphere`;
+    text = `not even light`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
@@ -114,7 +102,14 @@ In a way, black holes aren’t just cosmic vacuum cleaners—they’re natural t
 
 
     await sleep(text.length * 60);
-    text = `only a few kilometers wide`;
+    text = `Imagine squeezing the mass of our Sun`;
+    addText({
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        animationType: 'slideInSlideOut'
+    });
+
+    await sleep(text.length * 60);
+    text = `into a sphere of a few meters radius`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
