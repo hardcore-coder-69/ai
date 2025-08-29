@@ -1,6 +1,6 @@
 async function startChat() {
     await pushSenderMessage({
-        text: 'What is JavaScript?',
+        text: 'Explain JavaScript?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -17,7 +17,7 @@ async function startChat() {
 
     await pushReceiverMessage({
         text: `JavaScript is like that one friend who shows up uninvited, eats your snacks, but somehow makes the party fun.`,
-        image: '',
+        image: './vs/1.png',
         soundEl: '',
     });
 
@@ -84,14 +84,12 @@ But hey, at least JS gives you stack traces... which are basically GPS direction
 
     await sleep(500);
     await pushReceiverMessage({
-        text: `Why People Hate JS
-✅ Runs everywhere (browsers, servers, your fridge if it has Wi-Fi).
-✅ Huge ecosystem (npm = “Never-ending Package Mayhem”).`,
+        text: `Why People Hate JS? Runs everywhere (browsers, servers, your fridge if it has Wi-Fi). Huge ecosystem (npm: “Never-ending Package Mayhem”).`,
         image: '',
         soundEl: '',
     });
 
-    await sleep(500);
+    await sleep(1000);
     await pushReceiverMessage({
         text: `JavaScript doesn’t follow rules. It writes them, then laughs at you.`,
         image: '',

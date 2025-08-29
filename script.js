@@ -55,7 +55,7 @@ async function pushReceiverMessage(data) {
     await typeWriter({
         textEl: messageSpanEl,
         text: data.text,
-        typingSpeed: 50,
+        typingSpeed: 60,
         soundEl: aiTypingAudioEl
     });
     // messageSpanEl.innerText = data.text;
@@ -150,7 +150,7 @@ async function speakText(text, rate, voice) {
 }
 
 async function showSenderTyping(data) {
-    speakText(data.text, 1.25, null);
+    // speakText(data.text, 1.25, null);
     await typeWriter({
         textEl: miInputBoxEl,
         text: data.text,
