@@ -42,7 +42,7 @@ async function populateImages() {
 
 async function populateTexts() {
     let entireText = `Did you know that black holes aren’t actually holes in space? Instead, They’re incredibly dense objects with gravity so strong that nothing can escape, not even light. Imagine squeezing the mass of our Sun into a sphere of a few meters radius, that’s how dense they are.`;
-    speakText(entireText, 0.9, null);
+    speakText(entireText, 1.5, null);
 
     let text = `Did you know`;
     await addText({
@@ -50,35 +50,35 @@ async function populateTexts() {
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `that black holes aren’t`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `actually holes in space?`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `Instead,`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `They’re incredibly dense`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `objects with gravity so strong`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
@@ -86,14 +86,14 @@ async function populateTexts() {
     });
 
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `that nothing can escape`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `not even light`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
@@ -101,21 +101,21 @@ async function populateTexts() {
     });
 
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `Imagine squeezing the mass of our Sun`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `into a sphere of a few meters radius`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 60);
+    await sleep(text.length * 50);
     text = `that’s how dense they are.`;
     addText({
         textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
