@@ -1,6 +1,6 @@
 async function startChat() {
     await pushSenderMessage({
-        text: 'What would happen if the speed of light was slower?',
+        text: 'What is JavaScript?',
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -10,109 +10,101 @@ async function startChat() {
         messages: [
             {
                 text: 'Thinking...',
-                time: 5000
+                time: 2000
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `If the sunlight was slower, it would take much longer to reach light from Sun to Earth. Instead of 8 minutes and 20 seconds, it could take hours or days!`,
-        image: '',
-        soundEl: '',
-    });
-
-
-    await sleep(500);
-    await pushSenderMessage({
-        text: 'What about the other stars? Will they look the same as they look now?',
-        typingSpeed: 70,
-        image: '',
-        soundEl: '',
-    });
-
-    await receiverThinking({
-        messages: [
-            {
-                text: 'Thinking...',
-                time: 5000
-            }
-        ]
-    });
-
-    await pushReceiverMessage({
-        text: `Nope! Since light now takes longer time to travel, we’d be seeing much older versions of stars. Maybe not even see some of them yet because light haven't reached us yet.`,
+        text: `JavaScript is like that one friend who shows up uninvited, eats your snacks, but somehow makes the party fun.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
-    await pushSenderMessage({
-        text: 'Would this affect our current technology also?',
-        typingSpeed: 70,
-        image: '',
-        soundEl: '',
-    });
-
-    await receiverThinking({
-        messages: [
-            {
-                text: 'Thinking...',
-                time: 5000
-            }
-        ]
-    });
-
     await pushReceiverMessage({
-        text: `Yes. Things like internet, video calls, and GPS would all slow down. Talking to someone far away might feel like waiting for a letter in the mail.`,
+        text: `It’s the programming language of the web — basically, without JS, websites would just be boring digital pamphlets.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
-    await pushSenderMessage({
-        text: 'What about the known laws of physics? Will they still apply or get changed?',
-        typingSpeed: 70,
-        image: '',
-        soundEl: '',
-    });
-
-    await receiverThinking({
-        messages: [
-            {
-                text: 'Thinking...',
-                time: 5000
-            }
-        ]
-    });
-
     await pushReceiverMessage({
-        text: `The speed of light is part of the universe’s rules. If it were slower, time, space, and gravity might all behave differently. So the known physics laws might not work.`,
+        text: `let - a box you can change.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
-    await pushSenderMessage({
-        text: 'So, what would the universe feel like?',
-        typingSpeed: 70,
-        image: '',
-        soundEl: '',
-    });
-
-    await receiverThinking({
-        messages: [
-            {
-                text: 'Thinking...',
-                time: 5000
-            }
-        ]
-    });
-
     await pushReceiverMessage({
-        text: `The universe would feel delayed, stretched out, and much stranger than the one we know!`,
+        text: `const - a box you can’t change (like your Wi-Fi password that you forgot).`,
         image: '',
         soundEl: '',
     });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `var - the weird uncle of JavaScript. Works, but don’t invite him.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `Functions are like vending machines: you put stuff in, and (hopefully) something useful comes out.
+Unless you mess up, then they spit out undefined, which is just JS’s way of saying “¯\(ツ)/¯”.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `Objects are like Pokémon cards: you collect properties and show them off.
+Want the name? human.name. Want the mood? human.mood. Want respect? Sorry, JavaScript can’t help you there.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `JavaScript doesn’t like waiting. So it says,
+“Hey, you do your thing, I’ll come back later.”
+This is why JS can fetch data, load memes, and crash your tab — all at once.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `Errors in JS are like mosquitoes. Unexpected, annoying, and always buzzing around your head at 3 AM.
+But hey, at least JS gives you stack traces... which are basically GPS directions in a foreign language.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `Why People Hate JS
+✅ Runs everywhere (browsers, servers, your fridge if it has Wi-Fi).
+✅ Huge ecosystem (npm = “Never-ending Package Mayhem”).`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `JavaScript doesn’t follow rules. It writes them, then laughs at you.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+    await pushReceiverMessage({
+        text: `JavaScript is like magic: powerful, unpredictable, sometimes scary — but without it, the web would just sit there staring at you like Internet Explorer.`,
+        image: '',
+        soundEl: '',
+    });
+
 
     await chatEnded({
         text: `Chat ended.`
