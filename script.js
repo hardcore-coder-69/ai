@@ -2,7 +2,7 @@ const containerEl = document.getElementById('container');
 const intenseBGMAudioEl = document.getElementById('intense-bgm-audio');
 intenseBGMAudioEl.load();
 intenseBGMAudioEl.loop = true;
-intenseBGMAudioEl.volume = 0.1;
+intenseBGMAudioEl.volume = 1;
 
 
 async function addImage({ src, cssClass, style, stayTime, transition, transform }) {

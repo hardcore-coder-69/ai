@@ -42,83 +42,83 @@ async function populateImages() {
 
 async function populateTexts() {
     let entireText = `Did you know that black holes aren’t actually holes in space? Instead, They’re incredibly dense objects with gravity so strong that nothing can escape, not even light. Imagine squeezing the mass of our Sun into a sphere of a few meters radius, that’s how dense they are.`;
-    speakText(entireText, 1.5, null);
+    // speakText(entireText, 1.5, null);
 
     let text = `Did you know`;
     await addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `that black holes aren’t`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `actually holes in space?`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `Instead,`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `They’re incredibly dense`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `objects with gravity so strong`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `that nothing can escape`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `not even light`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `Imagine squeezing the mass of our Sun`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `into a sphere of a few meters radius`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
-    await sleep(text.length * 50);
+    await sleep(text.length * 65);
     text = `that’s how dense they are.`;
     addText({
-        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 28px;">${text}</div>`,
+        textHTML: `<div style="font-family: 'Zilla Slab'; font-size: 36px;">${text}</div>`,
         animationType: 'slideInSlideOut'
     });
 
