@@ -1,6 +1,6 @@
 async function startChat() {
     await pushSenderMessage({
-        text: 'Explain JavaScript?',
+        text: "Explain quantum physics to me like i'm no expert. No scary equations.",
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -16,93 +16,151 @@ async function startChat() {
     });
 
     await pushReceiverMessage({
-        text: `JavaScript is like that one friend who shows up uninvited, eats your snacks, but somehow makes the party fun.`,
+        text: `Think of quantum physics as the rulebook for how tiny things behave—like atoms and even smaller stuff. And spoiler: they’re weird.`,
         image: './vs/1.png',
         soundEl: '',
     });
 
     await sleep(500);
+
+    await pushSenderMessage({
+        text: "Weird how?",
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 1000
+            }
+        ]
+    });
+    
     await pushReceiverMessage({
-        text: `It’s the programming language of the web — basically, without JS, websites would just be boring digital pamphlets.`,
+        text: `Imagine you toss a ball. You know where it is and how fast it’s going. Easy.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
     await pushReceiverMessage({
-        text: `let - a box you can change.`,
+        text: `Now imagine the ball is so tiny that it refuses to behave. That’s quantum physics. At that scale, nature basically says, “Best I can do is probabilities.”`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushSenderMessage({
+        text: "So… it’s guessing?",
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 500
+            }
+        ]
+    });
+    
+    await pushReceiverMessage({
+        text: `Kinda! Instead of saying “the electron is here,” quantum physics says, “the electron is probably around here.” Until you look at it. Then it picks a spot.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushSenderMessage({
+        text: "Why does looking matter?",
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 300
+            }
+        ]
+    });
+    
+    await pushReceiverMessage({
+        text: `Because in quantum land, observing something is like interrupting it mid-vibe.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
     await pushReceiverMessage({
-        text: `const - a box you can’t change (like your Wi-Fi password that you forgot).`,
+        text: `Before you look, a particle exists in many possible states at once—this is called superposition.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushSenderMessage({
+        text: "Wait, many states at once?",
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 300
+            }
+        ]
+    });
+    
+    await pushReceiverMessage({
+        text: `Exactly. Imagine you haven’t checked your phone yet.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
     await pushReceiverMessage({
-        text: `var - the weird uncle of JavaScript. Works, but don’t invite him.`,
+        text: `Your message is both read and unread at the same time. Once you open it—boom—it’s officially read.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
-    await pushReceiverMessage({
-        text: `Functions are like vending machines: you put stuff in, and (hopefully) something useful comes out.
-Unless you mess up, then they spit out undefined, which is just JS’s way of saying “¯\(ツ)/¯”.`,
+
+    await pushSenderMessage({
+        text: "That’s… unsettling.",
+        typingSpeed: 70,
         image: '',
         soundEl: '',
     });
 
-    await sleep(500);
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Thinking...',
+                time: 500
+            }
+        ]
+    });
+    
     await pushReceiverMessage({
-        text: `Objects are like Pokémon cards: you collect properties and show them off.
-Want the name? human.name. Want the mood? human.mood. Want respect? Sorry, JavaScript can’t help you there.`,
+        text: `Welcome to quantum physics 😄`,
         image: '',
         soundEl: '',
     });
-
-    await sleep(500);
-    await pushReceiverMessage({
-        text: `JavaScript doesn’t like waiting. So it says,
-“Hey, you do your thing, I’ll come back later.”
-This is why JS can fetch data, load memes, and crash your tab — all at once.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(500);
-    await pushReceiverMessage({
-        text: `Errors in JS are like mosquitoes. Unexpected, annoying, and always buzzing around your head at 3 AM.
-But hey, at least JS gives you stack traces... which are basically GPS directions in a foreign language.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(500);
-    await pushReceiverMessage({
-        text: `Why People Hate JS? Runs everywhere (browsers, servers, your fridge if it has Wi-Fi). Huge ecosystem (npm: “Never-ending Package Mayhem”).`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(1000);
-    await pushReceiverMessage({
-        text: `JavaScript doesn’t follow rules. It writes them, then laughs at you.`,
-        image: '',
-        soundEl: '',
-    });
-
-    await sleep(500);
-    await pushReceiverMessage({
-        text: `JavaScript is like magic: powerful, unpredictable, sometimes scary — but without it, the web would just sit there staring at you like Internet Explorer.`,
-        image: '',
-        soundEl: '',
-    });
-
 
     await chatEnded({
         text: `Chat ended.`

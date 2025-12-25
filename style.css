@@ -91,7 +91,7 @@ body {
 
 .receiver-message-text {
     font-size: 26px;
-    color: rgb(0, 255, 0);
+    /* color: rgb(0, 255, 0); */
     /* letter-spacing: 1px; */
 }
 
