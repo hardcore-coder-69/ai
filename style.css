@@ -84,15 +84,15 @@ body {
 }
 
 .receiver-message-top-container {
-    font-family: "Courier Prime", monospace;
     margin-bottom: 50px;
     padding-right: 30px;
+    /* font-family: "Courier Prime", monospace; */
 }
 
 .receiver-message-text {
     font-size: 26px;
-    letter-spacing: -1px;
     color: rgb(0, 255, 0);
+    /* letter-spacing: 1px; */
 }
 
 .receiver-message-margin-top {

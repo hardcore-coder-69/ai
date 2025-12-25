@@ -51,7 +51,7 @@ async function pushReceiverMessage(data) {
     receiverMessageEl.appendChild(messageSpanEl);
     receiverMessageTopEl.appendChild(receiverMessageEl);
     innerContainerEl.appendChild(receiverMessageTopEl);
-    speakText(data.text, 1, voices[11]);
+    // speakText(data.text, 1, voices[11]);
     await typeWriter({
         textEl: messageSpanEl,
         text: data.text,
