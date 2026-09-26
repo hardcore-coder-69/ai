@@ -1,6 +1,6 @@
 async function startChat() {
     await pushSenderMessage({
-        text: "Explain quantum physics to me like i'm no expert. No scary equations.",
+        text: `What is quantum computing?`,
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -38,7 +38,7 @@ async function startChat() {
             }
         ]
     });
-    
+
     await pushReceiverMessage({
         text: `Imagine you toss a ball. You know where it is and how fast it’s going. Easy.`,
         image: '',
@@ -69,7 +69,7 @@ async function startChat() {
             }
         ]
     });
-    
+
     await pushReceiverMessage({
         text: `Kinda! Instead of saying “the electron is here,” quantum physics says, “the electron is probably around here.” Until you look at it. Then it picks a spot.`,
         image: '',
@@ -93,7 +93,7 @@ async function startChat() {
             }
         ]
     });
-    
+
     await pushReceiverMessage({
         text: `Because in quantum land, observing something is like interrupting it mid-vibe.`,
         image: '',
@@ -124,7 +124,7 @@ async function startChat() {
             }
         ]
     });
-    
+
     await pushReceiverMessage({
         text: `Exactly. Imagine you haven’t checked your phone yet.`,
         image: '',
@@ -155,7 +155,7 @@ async function startChat() {
             }
         ]
     });
-    
+
     await pushReceiverMessage({
         text: `Welcome to quantum physics 😄`,
         image: '',
