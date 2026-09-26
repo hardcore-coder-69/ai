@@ -1,6 +1,6 @@
 async function startChat() {
     await pushSenderMessage({
-        text: `What is quantum computing?`,
+        text: "Is time travel actually possible, or just sci-fi?",
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -9,22 +9,30 @@ async function startChat() {
     await receiverThinking({
         messages: [
             {
-                text: 'Thinking...',
-                time: 2000
+                text: 'Searching theoretical physics...',
+                time: 1500
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `Think of quantum physics as the rulebook for how tiny things behave—like atoms and even smaller stuff. And spoiler: they’re weird.`,
-        image: './vs/1.png',
+        text: `Plot twist: You’re already doing it right now, at one second per second.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushReceiverMessage({
+        text: `Jokes aside—traveling to the future? It’s 100% scientifically real and proven.`,
+        image: '',
         soundEl: '',
     });
 
     await sleep(500);
 
     await pushSenderMessage({
-        text: "Weird how?",
+        text: "Wait, seriously? How?",
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -33,21 +41,54 @@ async function startChat() {
     await receiverThinking({
         messages: [
             {
-                text: 'Thinking...',
+                text: 'Consulting Einstein...',
+                time: 1200
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Thank Albert Einstein. He proved that time isn’t a fixed ticking clock—it stretches and slows down.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushReceiverMessage({
+        text: `The faster you move through space, the slower you move through time. This is called time dilation.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushSenderMessage({
+        text: "Has anyone actually experienced this?",
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Checking space flight records...',
                 time: 1000
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `Imagine you toss a ball. You know where it is and how fast it’s going. Easy.`,
+        text: `Yes! Cosmonaut Sergei Krikalev spent over 803 days orbiting Earth at 17,500 mph.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
+
     await pushReceiverMessage({
-        text: `Now imagine the ball is so tiny that it refuses to behave. That’s quantum physics. At that scale, nature basically says, “Best I can do is probabilities.”`,
+        text: `Because of his speed, he literally traveled 0.02 seconds into the future. He is younger than he should be!`,
         image: '',
         soundEl: '',
     });
@@ -55,7 +96,7 @@ async function startChat() {
     await sleep(500);
 
     await pushSenderMessage({
-        text: "So… it’s guessing?",
+        text: "0.02 seconds is tiny. Can we jump years ahead?",
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -64,14 +105,22 @@ async function startChat() {
     await receiverThinking({
         messages: [
             {
-                text: 'Thinking...',
-                time: 500
+                text: 'Calculating near-lightspeed travel...',
+                time: 1000
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `Kinda! Instead of saying “the electron is here,” quantum physics says, “the electron is probably around here.” Until you look at it. Then it picks a spot.`,
+        text: `Easily—in theory. Imagine you board a rocket cruising at 99.9% the speed of light for 5 years.`,
+        image: './images/rocket.jpg',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushReceiverMessage({
+        text: `For you, only 5 years passed. But back on Earth, over 110 years have flown by. Everyone you knew is history.`,
         image: '',
         soundEl: '',
     });
@@ -79,7 +128,7 @@ async function startChat() {
     await sleep(500);
 
     await pushSenderMessage({
-        text: "Why does looking matter?",
+        text: "What about gravity, like in Interstellar?",
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -88,21 +137,22 @@ async function startChat() {
     await receiverThinking({
         messages: [
             {
-                text: 'Thinking...',
-                time: 300
+                text: 'Simulating extreme gravitational fields...',
+                time: 800
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `Because in quantum land, observing something is like interrupting it mid-vibe.`,
-        image: '',
+        text: `Gravity bends time too! The stronger the gravity, the slower time ticks.`,
+        image: './images/black_hole.jpg',
         soundEl: '',
     });
 
     await sleep(500);
+
     await pushReceiverMessage({
-        text: `Before you look, a particle exists in many possible states at once—this is called superposition.`,
+        text: `Park near a supermassive black hole for an hour, and decades will pass on Earth before you leave.`,
         image: '',
         soundEl: '',
     });
@@ -110,7 +160,7 @@ async function startChat() {
     await sleep(500);
 
     await pushSenderMessage({
-        text: "Wait, many states at once?",
+        text: "Mind blown. But what about going back to the past?",
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -119,29 +169,30 @@ async function startChat() {
     await receiverThinking({
         messages: [
             {
-                text: 'Thinking...',
-                time: 300
+                text: 'Warning: Paradox imminent...',
+                time: 1200
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `Exactly. Imagine you haven’t checked your phone yet.`,
+        text: `That’s where physics starts screaming.`,
         image: '',
         soundEl: '',
     });
 
     await sleep(500);
+
     await pushReceiverMessage({
-        text: `Your message is both read and unread at the same time. Once you open it—boom—it’s officially read.`,
-        image: '',
+        text: `General relativity does allow theoretical shortcuts called wormholes—bridges connecting two points in space-time.`,
+        image: './images/wormhole.jpg',
         soundEl: '',
     });
 
     await sleep(500);
 
     await pushSenderMessage({
-        text: "That’s… unsettling.",
+        text: "So can we build a wormhole?",
         typingSpeed: 70,
         image: '',
         soundEl: '',
@@ -150,14 +201,86 @@ async function startChat() {
     await receiverThinking({
         messages: [
             {
-                text: 'Thinking...',
-                time: 500
+                text: 'Synthesizing exotic matter...',
+                time: 900
             }
         ]
     });
 
     await pushReceiverMessage({
-        text: `Welcome to quantum physics 😄`,
+        text: `Keeping one open requires 'exotic matter' with negative mass—which might not even exist.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushReceiverMessage({
+        text: `And worse: you run directly into the Grandfather Paradox.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushSenderMessage({
+        text: "If you stop your grandparents from meeting... do you vanish?",
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Evaluating quantum timeline theories...',
+                time: 1000
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Physicists offer two mind-bending solutions:`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushReceiverMessage({
+        text: `1. The Multiverse: Traveling back branches into an alternate timeline, leaving your original past untouched.`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushReceiverMessage({
+        text: `2. Self-Consistency: Whatever you do in the past already happened. You can’t change it—you might even cause it!`,
+        image: '',
+        soundEl: '',
+    });
+
+    await sleep(500);
+
+    await pushSenderMessage({
+        text: "So moving forward is guaranteed, but the past is locked down?",
+        typingSpeed: 70,
+        image: '',
+        soundEl: '',
+    });
+
+    await receiverThinking({
+        messages: [
+            {
+                text: 'Final conclusion...',
+                time: 600
+            }
+        ]
+    });
+
+    await pushReceiverMessage({
+        text: `Spot on! You can sprint into tomorrow, but yesterday is fiercely guarded by the laws of physics.`,
         image: '',
         soundEl: '',
     });

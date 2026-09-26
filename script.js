@@ -38,6 +38,36 @@ async function pushSenderMessage(data) {
     await showSenderMessage(data);
 }
 
+async function showBigScreenImage(imageUrl, duration = 3000) {
+    if (!imageUrl) return;
+    const overlay = document.getElementById('big-screen-overlay');
+    const overlayImg = document.getElementById('big-screen-image');
+    const progressFill = document.getElementById('big-screen-progress-fill');
+    if (!overlay || !overlayImg) return;
+
+    overlayImg.src = imageUrl;
+
+    if (progressFill) {
+        progressFill.style.transition = 'none';
+        progressFill.style.width = '0%';
+    }
+
+    void overlay.offsetWidth;
+    overlay.classList.add('active');
+
+    if (progressFill) {
+        setTimeout(() => {
+            progressFill.style.transition = `width ${duration}ms linear`;
+            progressFill.style.width = '100%';
+        }, 50);
+    }
+
+    await sleep(duration);
+
+    overlay.classList.remove('active');
+    await sleep(400);
+}
+
 async function pushReceiverMessage(data) {
     let receiverMessageTopEl = document.createElement('div');
     receiverMessageTopEl.classList.add('receiver-message-top-container');
@@ -46,19 +76,53 @@ async function pushReceiverMessage(data) {
     }
     let receiverMessageEl = document.createElement('div');
     receiverMessageEl.classList.add('receiver-message-container');
-    let messageSpanEl = document.createElement('span');
-    messageSpanEl.classList.add('receiver-message-text');
-    receiverMessageEl.appendChild(messageSpanEl);
+
+    // Display image in chat if provided
+    if (data.image) {
+        let imgContainerEl = document.createElement('div');
+        imgContainerEl.classList.add('receiver-image-container');
+        imgContainerEl.title = 'Click to view full screen';
+        let imgEl = document.createElement('img');
+        imgEl.src = data.image;
+        imgEl.alt = data.caption || 'Illustration';
+        imgEl.classList.add('receiver-message-image');
+        imgContainerEl.appendChild(imgEl);
+        imgContainerEl.addEventListener('click', () => {
+            showBigScreenImage(data.image, 3000);
+        });
+        receiverMessageEl.appendChild(imgContainerEl);
+    }
+
+    let messageSpanEl = null;
+    if (data.text) {
+        messageSpanEl = document.createElement('span');
+        messageSpanEl.classList.add('receiver-message-text');
+        receiverMessageEl.appendChild(messageSpanEl);
+    }
+
     receiverMessageTopEl.appendChild(receiverMessageEl);
     innerContainerEl.appendChild(receiverMessageTopEl);
-    // speakText(data.text, 1, voices[11]);
-    await typeWriter({
-        textEl: messageSpanEl,
-        text: data.text,
-        typingSpeed: 70,
-        soundEl: aiTypingAudioEl
-    });
-    // messageSpanEl.innerText = data.text;
+
+    // If an image was sent in chat:
+    // 1. Show it in chat first
+    // 2. Showcase it on big screen for a few seconds
+    // 3. Return to chat before typing out the text
+    if (data.image) {
+        await sleep(600);
+        const duration = data.bigScreenDuration || 3000;
+        await showBigScreenImage(data.image, duration);
+        await sleep(350);
+    }
+
+    if (data.text && messageSpanEl) {
+        // speakText(data.text, 1, voices[11]);
+        await typeWriter({
+            textEl: messageSpanEl,
+            text: data.text,
+            typingSpeed: 70,
+            soundEl: aiTypingAudioEl
+        });
+    }
 }
 
 async function receiverThinking(data) {
@@ -98,10 +162,21 @@ async function showSenderMessage(data) {
     senderMessageTopEl.classList.add('sender-message-top-container');
     let senderMessageEl = document.createElement('div');
     senderMessageEl.classList.add('sender-message-container');
-    let messageSpanEl = document.createElement('span');
-    messageSpanEl.classList.add('sender-message-text');
-    messageSpanEl.innerText = data.text;
-    senderMessageEl.appendChild(messageSpanEl);
+    if (data.image) {
+        let imgContainerEl = document.createElement('div');
+        imgContainerEl.classList.add('sender-image-container');
+        let imgEl = document.createElement('img');
+        imgEl.src = data.image;
+        imgEl.classList.add('sender-message-image');
+        imgContainerEl.appendChild(imgEl);
+        senderMessageEl.appendChild(imgContainerEl);
+    }
+    if (data.text) {
+        let messageSpanEl = document.createElement('span');
+        messageSpanEl.classList.add('sender-message-text');
+        messageSpanEl.innerText = data.text;
+        senderMessageEl.appendChild(messageSpanEl);
+    }
     senderMessageTopEl.appendChild(senderMessageEl);
     innerContainerEl.appendChild(senderMessageTopEl);
 }
@@ -198,6 +273,12 @@ async function sleep(ms) {
 window.addEventListener('load', function () {
     speechSynthesis.cancel();
     miInputBoxEl.innerText = '';
+    const bigScreenOverlayEl = document.getElementById('big-screen-overlay');
+    if (bigScreenOverlayEl) {
+        bigScreenOverlayEl.addEventListener('click', () => {
+            bigScreenOverlayEl.classList.remove('active');
+        });
+    }
 })
 
 async function showAds() {
